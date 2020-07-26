@@ -1,4 +1,4 @@
-name: oOf dynamic again
+name: oOf merging
 
 on:
 #  release:
@@ -38,9 +38,9 @@ jobs:
             
        - name: Downloading system, product, and opproduct
          run: | 
-              aria2c https://tdrive.manofuranium.workers.dev/OP7T/system.img
-              aria2c https://tdrive.manofuranium.workers.dev/OP7T/product.img
-              aria2c https://tdrive.manofuranium.workers.dev/OP7T/opproduct.img
+              aria2c http://tdrive.manofuranium.workers.dev/OP7T/system.img
+              aria2c http://tdrive.manofuranium.workers.dev/OP7T/product.img
+              aria2c http://tdrive.manofuranium.workers.dev/OP7T/opproduct.img
               
        - name: making
          run: |
