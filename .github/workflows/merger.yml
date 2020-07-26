@@ -57,7 +57,7 @@ jobs:
               sudo umount system/
               cd system_new
               sudo rmdir product
-              cd..
+              cd ..
               mkdir systemop7
               sudo mount -o loop system.img systemop7/
               sudo cp -v -r -p systemop7/product /system_new
