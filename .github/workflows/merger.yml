@@ -81,7 +81,7 @@ jobs:
               ls
               ls system_new
               
-       - name: upload aonly n info
+       - name: lmao
          run: |
               mkdir lel
               sudo cp -r payload_dumper/OP7T.zip lel
