@@ -38,9 +38,9 @@ jobs:
             
        - name: Downloading system, product, and opproduct
          run: | 
-              aria2c http://tdrive.manofuranium.workers.dev/OP7T/system.img
-              aria2c http://tdrive.manofuranium.workers.dev/OP7T/product.img
-              aria2c http://tdrive.manofuranium.workers.dev/OP7T/opproduct.img
+              aria2c http://tdrive.manofuranium.workers.dev/OP7TPro/system.img
+              aria2c http://tdrive.manofuranium.workers.dev/OP7TPro/product.img
+              aria2c http://tdrive.manofuranium.workers.dev/OP7TPro/opproduct.img
               
        - name: making
          run: |
@@ -84,6 +84,6 @@ jobs:
               
        - name: upload ab n info
          run: |
-              sudo zip op7tt.zip system.img
+              sudo zip op7ttt.zip system.img
               curl -sL https://git.io/file-transfer | sh
-              ./transfer bit op7tt.zip
+              ./transfer bit op7ttt.zip
