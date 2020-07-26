@@ -55,13 +55,18 @@ jobs:
               sudo cp -v -r -p system/* system_new/
               sync
               sudo umount system/
+              cd system_new
               sudo rmdir product
+              cd..
               mkdir systemop7
               sudo mount -o loop system.img systemop7/
               sudo cp -v -r -p systemop7/product /system_new
               sudo umount systemop7/
+              cd system_new/system
               sudo rm product
               sudo mkdir product
+              cd ..
+              cd ..
               mkdir product
               sudo mount -o ro product.img product/
               sudo cp -v -r -p product/* /system_new/system/product
