@@ -58,18 +58,18 @@ jobs:
               sudo rmdir product
               mkdir systemop7
               sudo mount -o loop system.img systemop7/
-              cp -v -r -p systemop7/product /system_new
+              sudo cp -v -r -p systemop7/product /system_new
               sudo umount systemop7/
               sudo rm product
               sudo mkdir product
               mkdir product
               sudo mount -o ro product.img product/
-              cp -v -r -p product/* /system_new/system/product
+              sudo cp -v -r -p product/* /system_new/system/product
               sync
               sudo umount product/
               mkdir opproduct
               sudo mount -o ro opproduct.img opproduct/
-              cp -v -r -p opproduct/* /system_new/oneplus
+              sudo cp -v -r -p opproduct/* /system_new/oneplus
               sync
               sudo umount opproduct/
               sudo umount system_new/
