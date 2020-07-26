@@ -52,7 +52,7 @@ jobs:
               mkdir system_new
               sudo mount -o loop system_new.img system_new/
               sudo mount -o ro system.img system/
-              cp -v -r -p system/* system_new/
+              sudo cp -v -r -p system/* system_new/
               sync
               sudo umount system/
               sudo rmdir product
