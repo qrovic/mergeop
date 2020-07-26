@@ -84,8 +84,6 @@ jobs:
               
        - name: upload ab n info
          run: |
-              sudo chmod -R 777 E
-              cd ErfanGSIs
-              zip op7tt.zip system.img
+              sudo zip op7tt.zip system.img
               curl -sL https://git.io/file-transfer | sh
               ./transfer bit op7tt.zip
