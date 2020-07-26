@@ -84,6 +84,6 @@ jobs:
               
        - name: upload ab n info
          run: |
-              sudo zip op7ttt.zip system.img
+              sudo zip OP7TPro.zip system.img
               curl -sL https://git.io/file-transfer | sh
-              ./transfer bit op7ttt.zip
+              ./transfer bit OP7TPro.zip
