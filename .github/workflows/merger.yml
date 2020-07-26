@@ -74,7 +74,7 @@ jobs:
               sudo umount product/
               mkdir opproduct
               sudo mount -o ro opproduct.img opproduct/
-              sudo cp -v -r -p opproduct/* /system_new/oneplus
+              sudo cp -v -r -p opproduct/* system_new/oneplus/
               sync
               sudo umount opproduct/
               sudo umount system_new/
