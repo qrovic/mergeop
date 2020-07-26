@@ -60,7 +60,7 @@ jobs:
               cd ..
               mkdir systemop7
               sudo mount -ro loop system.img systemop7/
-              sudo cp -v -r -p systemop7/product /system_new
+              sudo cp -v -r -p systemop7/product system_new/
               sudo umount systemop7/
               cd system_new/system
               sudo rm product
