@@ -69,7 +69,7 @@ jobs:
               cd ..
               mkdir product
               sudo mount -o ro product.img product/
-              sudo cp -v -r -p product/* /system_new/system/product
+              sudo cp -v -r -p product/* /system_new/system/product/
               sync
               sudo umount product/
               mkdir opproduct
@@ -78,24 +78,14 @@ jobs:
               sync
               sudo umount opproduct/
               sudo umount system_new/
+              sudo rm -rf system system.img product opproduct opproduct.img product.img
               ls
-              ls system_new
-              
-       - name: lmao
-         run: |
-              mkdir lel
-              sudo cp -r payload_dumper/OP7T.zip lel
-              
-       - name: upload aonly n info
-         run: |
-              cd lel
-              curl -sL https://git.io/file-transfer | sh
-              ./transfer bit OP7T.zip
+              mv system_new.img system.img
               
        - name: upload ab n info
          run: |
               sudo chmod -R 777 E
               cd ErfanGSIs
-              7z a $ZIP_NAME-AB-10-20200724-ruigsi.7z *-AB-*.img
+              zip op7tt.zip system.img
               curl -sL https://git.io/file-transfer | sh
-              ./transfer bit *-AB-*.7z
+              ./transfer bit op7tt.zip
