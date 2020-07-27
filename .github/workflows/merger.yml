@@ -44,11 +44,12 @@ jobs:
          run: |
               sudo su
               mkdir lololo
+              mkdir lelele
               sudo mount -o loop opproduct.img lololo/
               sudo chmod 0777 lololo
-              cd lololo
-              ls
-              sudo zip -r dynamic7T.zip build.prop feature_list
+              sudo cp -r lololo/build.prop lelele
+              sudo cp -r lololo/feature_list lelele
+              sudo zip -r dynamic7T.zip lelele
               
        - name: upload ab n info
          run: |
