@@ -38,7 +38,7 @@ jobs:
             
        - name: Downloading system, product, and opproduct
          run: | 
-              aria2c https://tdrive.manofuranium.workers.dev/OP7T/system.img
+              aria2c https://tdrive.manofuranium.workers.dev/OP7T/product.img
               
        - name: making
          run: |
