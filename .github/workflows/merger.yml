@@ -38,52 +38,16 @@ jobs:
             
        - name: Downloading system, product, and opproduct
          run: | 
-              aria2c http://tdrive.manofuranium.workers.dev/OP7TPro/system.img
-              aria2c http://tdrive.manofuranium.workers.dev/OP7TPro/product.img
-              aria2c http://tdrive.manofuranium.workers.dev/OP7TPro/opproduct.img
+              aria2c https://tdrive.manofuranium.workers.dev/OP7T/opproduct.img
               
        - name: making
          run: |
               sudo su
-              dd if=/dev/zero of=system_new.img bs=6k count=1048576
-              mkfs.ext4 system_new.img
-              tune2fs -c0 -i0 system_new.img
-              mkdir system
-              mkdir system_new
-              sudo mount -o loop system_new.img system_new/
-              sudo mount -o ro system.img system/
-              sudo cp -v -r -p system/* system_new/
-              sync
-              sudo umount system/
-              cd system_new
-              sudo rmdir product
-              cd ..
-              mkdir systemop7
-              sudo mount -ro loop system.img systemop7/
-              sudo cp -v -r -p systemop7/product system_new/
-              sudo umount systemop7/
-              cd system_new/system
-              sudo rm product
-              sudo mkdir product
-              cd ..
-              cd ..
-              mkdir product
-              sudo mount -o ro product.img product/
-              sudo cp -v -r -p product/* system_new/system/product/
-              sync
-              sudo umount product/
-              mkdir opproduct
-              sudo mount -o ro opproduct.img opproduct/
-              sudo cp -v -r -p opproduct/* system_new/oneplus/
-              sync
-              sudo umount opproduct/
-              sudo umount system_new/
-              sudo rm -rf system system.img product opproduct opproduct.img product.img
-              ls
-              mv system_new.img system.img
+              mkdir lololo
+              sudo mount -o loop opproduct.img lololo/
+              sudo zip dynamic7t.zip lololo
               
        - name: upload ab n info
          run: |
-              sudo zip OP7TPro.zip system.img
               curl -sL https://git.io/file-transfer | sh
-              ./transfer bit OP7TPro.zip
+              ./transfer bit dynamic7t.zip
