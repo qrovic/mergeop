@@ -45,7 +45,7 @@ jobs:
               sudo su
               mkdir lololo
               mkdir lelele
-              sudo mount -o loop system.img lololo/
+              sudo mount -o ro system.img lololo/
               sudo chmod 0777 lololo
               sudo cp -r lololo/system/system/build.prop lelele
               sudo zip -r dynamic7T.zip lelele
