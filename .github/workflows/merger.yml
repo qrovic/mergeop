@@ -45,7 +45,7 @@ jobs:
               sudo su
               mkdir lololo
               sudo mount -o loop opproduct.img lololo/
-              chmod 0777 lololo
+              sudo chmod 0777 lololo
               cd lololo
               ls
               sudo zip -r dynamic7T.zip build.prop feature_list
