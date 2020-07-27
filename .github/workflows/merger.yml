@@ -45,11 +45,12 @@ jobs:
               sudo su
               mkdir lololo
               sudo mount -o loop opproduct.img lololo/
+              chmod 0777 lololo
               cd lololo
               ls
-              sudo zip -r dynamic7t.zip build.prop feature_list
+              sudo zip -r dynamic7T.zip build.prop feature_list
               
        - name: upload ab n info
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer bit dynamic7t.zip
+              ./transfer wet dynamic7T.zip
