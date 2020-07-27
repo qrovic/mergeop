@@ -38,17 +38,16 @@ jobs:
             
        - name: Downloading system, product, and opproduct
          run: | 
-              aria2c https://tdrive.manofuranium.workers.dev/OP7T/opproduct.img
+              aria2c https://tdrive.manofuranium.workers.dev/OP7T/system.img
               
        - name: making
          run: |
               sudo su
               mkdir lololo
               mkdir lelele
-              sudo mount -o loop opproduct.img lololo/
+              sudo mount -o loop system.img lololo/
               sudo chmod 0777 lololo
-              sudo cp -r lololo/build.prop lelele
-              sudo cp -r lololo/feature_list lelele
+              sudo cp -r lololo/system/system/build.prop lelele
               sudo zip -r dynamic7T.zip lelele
               
        - name: upload ab n info
