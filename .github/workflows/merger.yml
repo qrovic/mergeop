@@ -38,15 +38,16 @@ jobs:
             
        - name: Downloading system, product, and opproduct
          run: | 
-              aria2c https://tdrive.manofuranium.workers.dev/OP7T/product.img
+              aria2c http://tdrive.manofuranium.workers.dev/L79031_ROW_OPEN_USER_Q00114.1a_Q_ROW_12.0.099_ST_200721_qpst/super_3.img
               
        - name: making
          run: |
               sudo su
               mkdir lololo
               mkdir lelele
-              sudo mount -o ro product.img lololo/
+              sudo mount -o ro super_3.img lololo/
               ls lololo
+              ls product
               sudo cp -r lololo/build.prop lelele
               sudo zip -r dynamic7Tproductprop.zip lelele
               
