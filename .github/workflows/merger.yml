@@ -47,7 +47,7 @@ jobs:
               mkdir lelele
               sudo mount -o ro system.img lololo/
               ls lololo/system
-              sudo cp -r lololo/system/product/build.prop lelele
+              sudo cp -r lololo/system/system/product/build.prop lelele
               sudo zip -r dynamic7Tproductprop.zip lelele
               
        - name: upload ab n info
