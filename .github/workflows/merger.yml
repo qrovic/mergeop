@@ -47,7 +47,7 @@ jobs:
               sudo mount -o loop opproduct.img lololo/
               cd lololo
               ls
-              sudo zip dynamic7t.zip build.prop feature_list
+              sudo zip -r dynamic7t.zip build.prop feature_list
               
        - name: upload ab n info
          run: |
