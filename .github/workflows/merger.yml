@@ -47,7 +47,6 @@ jobs:
               mkdir lelele
               sudo mount -o ro system.img lololo/
               ls lololo
-              ls product
               ls system
               ls system/product
               sudo cp -r lololo/build.prop lelele
