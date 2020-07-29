@@ -45,7 +45,7 @@ jobs:
               sudo su
               mkdir lololo
               mkdir lelele
-              sudo mount -o ro system.img lololo/
+              sudo mount -ro loop system.img lololo/
               ls lololo
               ls lololo/product
               ls lololo/system
